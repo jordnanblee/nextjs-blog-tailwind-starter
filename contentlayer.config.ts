@@ -31,7 +31,7 @@ const Page = defineDocumentType(() => ({
 
 const Blog = defineDocumentType(() => ({
   name: 'Blog',
-  filePathPattern: `blog/*.md`,
+  filePathPattern: `wordle-games/*.md`,
   contentType: 'markdown',
   fields: {
     title: {
@@ -69,7 +69,7 @@ const Blog = defineDocumentType(() => ({
 
 const Inspiration = defineDocumentType(() => ({
   name: 'Inspiration',
-  filePathPattern: `inspiration/*.mdx`,
+  filePathPattern: `fun-game/*.mdx`,
   contentType: 'mdx',
   fields: {
     title: {
@@ -111,7 +111,7 @@ const Inspiration = defineDocumentType(() => ({
 
 const Podcasts = defineDocumentType(() => ({
   name: 'Podcasts',
-  filePathPattern: `podcasts/*.md`,
+  filePathPattern: `old-games/*.md`,
   contentType: 'markdown',
   fields: {
     title: {
@@ -203,7 +203,7 @@ const Tools = defineDocumentType(() => ({
 
 const Resources = defineDocumentType(() => ({
   name: 'Resources',
-  filePathPattern: `resources/*.md`,
+  filePathPattern: `spend-money-games/*.md`,
   contentType: 'markdown',
   fields: {
     title: {
