@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://design-code.tips
+Host: https://neilgames.netlify.app/
 
 # Sitemaps
-Sitemap: https://design-code.tips/sitemap.xml
+Sitemap: https://neilgames.netlify.app/sitemap.xml
