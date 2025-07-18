@@ -92,9 +92,9 @@ export default function Home() {
   return (
     <Layout>
       <div className="md:max-w-[87%] m-auto px-4 md:px-12 flex flex-col gap-24 xl:gap-32 pb-24 xl:pb-36">
-       <!-- <h1 className="text-3xl lg:text-4xl max-w-[4rem] mt-12 text-balance">
+        <h1 className="text-3xl lg:text-4xl max-w-[4rem] mt-12 text-balance">
           {home?.title}
-        </h1> --> 
+        </h1> 
 
 
         <section className="flex flex-col gap-4">
