@@ -15,7 +15,6 @@ export async function generateMetadata({
   if (!blog) {
     return notFound()
   }
-
   return {
     title: blog.title,
     description: blog.description,
