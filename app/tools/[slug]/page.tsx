@@ -23,7 +23,7 @@ export async function generateMetadata({
     description: tool.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/tool/${tool.slug}`,
+      url: `${SITE_URL}/tools/${tool.slug}`,
       title: tool.title,
       description: tool.description,
       publishedTime: tool.date,

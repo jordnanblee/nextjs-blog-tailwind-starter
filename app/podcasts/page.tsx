@@ -22,7 +22,7 @@ export function generateMetadata(): Metadata {
     description: SEO.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/podcasts/`,
+      url: `${SITE_URL}/old-games/`,
       title: SEO.title,
       description: SEO.description,
       authors: `${AUTHOR_NAME}`,

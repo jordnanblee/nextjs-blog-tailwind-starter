@@ -25,7 +25,7 @@ export async function generateMetadata({
     description: podcast.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/podcast/${podcast.slug}`,
+      url: `${SITE_URL}/old-games/${podcast.slug}`,
       title: podcast.title,
       description: podcast.description,
       publishedTime: podcast.date,

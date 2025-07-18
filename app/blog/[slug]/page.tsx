@@ -21,7 +21,7 @@ export async function generateMetadata({
     description: blog.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/games/${blog.slug}/`,
+      url: `${SITE_URL}/wordle-games/${blog.slug}/`,
       title: blog.title,
       description: blog.description,
       publishedTime: blog.date,

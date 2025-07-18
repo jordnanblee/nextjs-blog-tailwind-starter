@@ -25,7 +25,7 @@ export async function generateMetadata({
     description: resource.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/resources/${resource.slug}/`,
+      url: `${SITE_URL}/spend-money-games/${resource.slug}/`,
       title: resource.title,
       description: resource.description,
       publishedTime: resource.date,

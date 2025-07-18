@@ -19,7 +19,7 @@ export function generateMetadata(): Metadata {
     description: SEO.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/inspiration/`,
+      url: `${SITE_URL}/fun-game/`,
       title: SEO.title,
       description: SEO.description,
       authors: `${AUTHOR_NAME}`,

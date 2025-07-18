@@ -10,7 +10,7 @@ import { SITE_NAME, SITE_URL } from '../../config'
 
 export function generateMetadata(): Metadata {
   const SEO = {
-    title: 'Code Blog by Nuno Marques | Design & Development Tips',
+    title: 'Code Blog by Neil Jordnan | Design & Development Tips',
     description:
       'Discover the latest blogs on code, web design and development. Stay up to date with the latest trends and technologies, with code examples.',
     image: `${SITE_URL}/og-card.png`,
@@ -20,7 +20,7 @@ export function generateMetadata(): Metadata {
     title: SEO.title,
     description: SEO.description,
     openGraph: {
-      url: `${SITE_URL}/games/`,
+      url: `${SITE_URL}/wordle-games/`,
       title: SEO.title,
       description: SEO.description,
       images: [
