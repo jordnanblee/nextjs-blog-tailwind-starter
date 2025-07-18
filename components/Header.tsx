@@ -53,41 +53,32 @@ export default function Header() {
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
-                  href="/games"
+                  href="/wordle-games"
                   className={menuItemClasses}
                 >
                   <Icon name="blog" className={iconClasses} />
-                  Games 2
+                  Wordle Games
                 </Link>
               </li>
+            
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
-                  href="/tags"
-                  className={menuItemClasses}
-                >
-                  <Icon name="tag" className={iconClasses} />
-                  All Tags
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={() => setNavbar(!navbar)}
-                  href="/inspiration"
+                  href="/fun-game"
                   className={menuItemClasses}
                 >
                   <Icon name="inspiration" className={iconClasses} />
-                  Inspiration
+                  Fun Game
                 </Link>
               </li>
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
-                  href="/podcasts"
+                  href="/old-games"
                   className={menuItemClasses}
                 >
                   <Icon name="podcasts" className={iconClasses} />
-                  Podcasts
+                  Old Games
                 </Link>
               </li>
               <li>
@@ -103,13 +94,24 @@ export default function Header() {
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
-                  href="/resources"
+                  href="/spend-money-game"
                   className={menuItemClasses}
                 >
                   <Icon name="resources" className={iconClasses} />
-                  Resources
+                  Spend Money Games
                 </Link>
               </li>
+ <li>
+                <Link
+                  onClick={() => setNavbar(!navbar)}
+                  href="/tags"
+                  className={menuItemClasses}
+                >
+                  <Icon name="tag" className={iconClasses} />
+                  All Tags
+                </Link>
+              </li>
+              
             </menu>
           </div>
         </div>
