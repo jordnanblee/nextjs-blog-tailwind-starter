@@ -46,8 +46,8 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'text' }
 
-  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
-    label: 'Games' # Used in the UI
+  - name: 'wordle-games' # Used in routes, e.g., /admin/collections/blog
+    label: 'Wordle Games' # Used in the UI
     folder: 'content/blog' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{title}}' # Filename template, e.g., 2024-090-25-name-of-doc.md
@@ -76,8 +76,8 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
 
-  - name: 'inspiration'
-    label: 'Inspiration'
+  - name: 'fun-game'
+    label: 'Fun Game'
     folder: 'content/inspiration'
     create: true
     slug: '{{title}}'
@@ -112,9 +112,9 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
 
-  - name: 'podcasts'
-    label: 'Podcasts'
-    label_singular: 'Podcast'
+  - name: 'old-games'
+    label: 'Old Games'
+    label_singular: 'Old Games'
     folder: 'content/podcasts'
     create: true
     slug: '{{title}}'
@@ -184,9 +184,9 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
 
-  - name: 'resources'
-    label: 'Resources'
-    label_singular: 'Resource'
+  - name: 'spend-money-game'
+    label: 'Spend Money Game'
+    label_singular: 'Spend Games'
     folder: 'content/resources'
     create: true
     slug: '{{title}}'
