@@ -9,9 +9,10 @@ backend:
 editor:
   preview: false
 
-display_url: https://neilgames.netlify.app # This url will display in the top-right of the CMS
-media_folder: 'public/media' # Media files will be stored in the repo under static/media
-public_folder: '/media' # The src attribute for uploaded media will begin with /media
+display_url: https://neilgames.netlify.app
+media_folder: 'public/media'
+public_folder: '/media'
+
 collections:
   - name: 'page'
     label: 'Pages'
@@ -36,7 +37,7 @@ collections:
               sanitize_preview: true,
               buttons: ['bold', 'italic', 'link'],
               modes: ['rich_text'],
-              editor_components: [''],
+              editor_components: ['iframe'],
             }
 
       - file: 'content/page/contact.md'
@@ -46,32 +47,39 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'text' }
 
-  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
-    label: 'Games' # Used in the UI
-    folder: 'content/blog' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{title}}' # Filename template, e.g., 2024-090-25-name-of-doc.md
+  - name: 'blog'
+    label: 'Games'
+    folder: 'content/blog'
+    create: true
+    slug: '{{title}}'
     view_groups:
-      - label: Year
-        field: date
-        pattern: \d{4}
-    fields: # The fields for each document, usually in front matter
+      - label: Category
+        field: categories
+    fields:
       - {
-          label: 'Template Key', # This field is used to "group" the posts by category
+          label: 'Template Key',
           name: 'templateKey',
-          widget: 'hidden', # It should be an `hidden` field
+          widget: 'hidden',
           default: 'blog',
         }
       - { label: 'Title', name: 'title', widget: string }
       - { label: 'Featured', name: 'featured', widget: boolean, default: false }
       - {
+          label: 'Categories',
+          name: 'categories',
+          widget: 'select',
+          options: ['Wordle Games', 'Fun Game', 'Old games', 'spend money game', 'dinosaur-games'],
+          multiple: false,
+          required: true
+        }
+      - {
           label: 'Body',
           name: 'body',
           widget: 'markdown',
           sanitize_preview: true,
-          # buttons: ['bold', 'italic', 'link'],
-          # modes: ['rich_text'],
-          # editor_components: [''],
+          modes: ['rich_text'],
+          buttons: ['bold', 'italic', 'link', 'code'],
+          editor_components: ['iframe'],
         }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
@@ -214,6 +222,20 @@ collections:
         }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+
+editor_components:
+  - label: Iframe
+    id: iframe
+    widget: object
+    fields:
+      - { label: 'URL', name: 'src', widget: 'string' }
+      - { label: 'Height', name: 'height', widget: 'string', default: '400' }
+      - { label: 'Width', name: 'width', widget: 'string', default: '100%' }
+    pattern: '{{< iframe src="{{src}}" height="{{height}}" width="{{width}}" >}}'
+    from_block: |
+      ^{{<\s*iframe\s+src="(?P<src>[^"]+)"\s+height="(?P<height>[^"]+)"\s+width="(?P<width>[^"]+)"\s*>}}$
+    to_block: |
+      {{< iframe src="{{src}}" height="{{height}}" width="{{width}}" >}}
 
   # - name: 'authors'
   #   label: 'Authors'
