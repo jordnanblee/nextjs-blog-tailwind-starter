@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="p-4 sm:p-6 bg-slate-200 dark:bg-slate-800">
       <div className="flex items-center justify-between text-xs">
         <p className="text-slate-700 dark:text-slate-300">
-          Copyright &copy; 2017-{currentYear}
+          Copyright &copy; 20{currentYear}
         </p>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
