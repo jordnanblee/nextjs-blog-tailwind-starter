@@ -9,7 +9,7 @@ export default function ResourcesPostCard({ post }: { post: Resources }) {
   return (
     <Link
       key={post.slug}
-      href={`/resources/${post.slug}/`}
+      href={`/spend-money-games/${post.slug}/`}
       className={cardClasses + ' items-center group overflow-hidden'}
     >
       <figure className="overflow-hidden size-36 sm:size-24 shrink-0 rounded-lg shadow-lg bg-slate-200 dark:bg-slate-700">

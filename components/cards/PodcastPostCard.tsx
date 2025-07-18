@@ -9,7 +9,7 @@ export default function PodcastPostCard({ post }: { post: Podcasts }) {
   return (
     <Link
       key={post.slug}
-      href={`/podcasts/${post.slug}/`}
+      href={`/old-games/${post.slug}/`}
       className={cardClasses + ' p-0 group overflow-hidden'}
     >
       <figure className="overflow-hidden aspect-square bg-slate-200 dark:bg-slate-700">

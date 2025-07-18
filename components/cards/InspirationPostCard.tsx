@@ -9,7 +9,7 @@ export default function InspirationPostCard({ post }: { post: Inspiration }) {
   return (
     <Link
       key={post.slug}
-      href={`/inspiration/${post.slug}/`}
+      href={`/fun-game/${post.slug}/`}
       className={InspirationCardClasses + ' p-0 group overflow-hidden'}
     >
       <figure className="overflow-hidden bg-slate-200 dark:bg-slate-700">
