@@ -20,7 +20,7 @@ export function generateMetadata(): Metadata {
     title: SEO.title,
     description: SEO.description,
     openGraph: {
-      url: `${SITE_URL}/blog/`,
+      url: `${SITE_URL}/games/`,
       title: SEO.title,
       description: SEO.description,
       images: [
