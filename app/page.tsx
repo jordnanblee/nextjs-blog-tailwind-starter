@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="md:max-w-[87%] m-auto px-4 md:px-12 flex flex-col gap-24 xl:gap-32 pb-24 xl:pb-36">
-       <!-- <h1 className="text-3xl lg:text-4xl max-w-[28rem] mt-12 text-balance">
+       <!-- <h1 className="text-3xl lg:text-4xl max-w-[4rem] mt-12 text-balance">
           {home?.title}
         </h1> --> 
 
@@ -104,9 +104,9 @@ export default function Home() {
                 name="inspiration"
                 className="size-6 sm:size-8 opacity-60"
               />
-              <span>Inspiration</span>
+              <span>Fun Games</span>
             </h2>
-            <Link href="/inspiration">View all &rarr;</Link>
+            <Link href="/fun-game">View all &rarr;</Link>
           </div>
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 flex-wrap">
             {inspirations.map((post) => (
@@ -115,13 +115,28 @@ export default function Home() {
           </div>
         </section>
 
+ <section className="flex flex-col gap-4">
+          <div className="flex justify-between items-end mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+              <Icon name="blog" className="size-6 sm:size-8 opacity-60" />
+              <span>Wordle Games</span>
+            </h2>
+            <Link href="/wordle-games">View all &rarr;</Link>
+          </div>
+          <div className="grid xl:grid-cols-2 gap-4 flex-wrap">
+            {blogs.map((post) => (
+              <BlogCardPost key={post.slug} post={post as Blog} />
+            ))}
+          </div>
+        </section>
+
         <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon name="podcasts" className="size-6 sm:size-8 opacity-60" />
-              <span>Podcasts</span>
+              <span>Old Games</span>
             </h2>
-            <Link href="/podcasts">View all &rarr;</Link>
+            <Link href="/old-games">View all &rarr;</Link>
           </div>
           <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 flex-wrap">
             {podcasts.map((post) => (
@@ -145,20 +160,6 @@ export default function Home() {
           </div>
         </section>
 
- <section className="flex flex-col gap-4">
-          <div className="flex justify-between items-end mb-4">
-            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-              <Icon name="blog" className="size-6 sm:size-8 opacity-60" />
-              <span>Games Blog</span>
-            </h2>
-            <Link href="/games">View all &rarr;</Link>
-          </div>
-          <div className="grid xl:grid-cols-2 gap-4 flex-wrap">
-            {blogs.map((post) => (
-              <BlogCardPost key={post.slug} post={post as Blog} />
-            ))}
-          </div>
-        </section>
       </div>
     </Layout>
   )
