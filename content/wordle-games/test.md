@@ -1,5 +1,5 @@
 ---
-templateKey: blog
+templateKey: wordle-games
 title: Test
 featured: true
 tags:

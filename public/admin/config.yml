@@ -48,7 +48,7 @@ collections:
 
   - name: 'wordle-games' # Used in routes, e.g., /admin/collections/blog
     label: 'Wordle Games' # Used in the UI
-    folder: 'content/blog' # The path to the folder where the documents are stored
+    folder: 'content/wordle-games' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{title}}' # Filename template, e.g., 2024-090-25-name-of-doc.md
     view_groups:
